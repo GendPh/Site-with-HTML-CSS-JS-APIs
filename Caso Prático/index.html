@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="M5. Javascript Ajax caso prático">
+  <meta name="keywords" content="M5, Javascript, Ajax, CasoPrático">
+  <meta name="author" content="Gabriel Ferreira">
+  <title>M5. Caso Prático</title>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/ab2155e76b.js" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./lightbox.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./mapConfig/map.css">
+</head>
+
+<body>
+  <header class="primary-header flex">
+    <div class="icon"><a href="#top">G<span>W</span>D</a></div>
+    <button class="navbar-iconClose" id="navbar-btn" data-visible="true" aria-expanded="false">
+    </button>
+    <nav>
+      <ul class="primary-navbar flex" id="navBar" data-visible="true">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#Portfolio">Portfolio</a></li>
+        <li><a href="#BudgetRequest">Budget Request</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="StartPage">
+    <section id="Home">
+      <button id="newsBtn" class="newsIcon" aria-expanded="false"></button>
+      <div class="Main-content" id="mainContent" data-visible="false">
+        <div class="container">
+          <div class="containerdata">
+            <h2>DO you need a web personal website?</h2>
+            <h3>Here, you will be able to see what options you have.</h3>
+            <p>You can see my portfolio of what i can do, and if you like anything u can contact me so that we can
+              discuss it better.</p>
+            <ol>
+              <li><a href="#Portfolio">Portfolio</a></li>
+              <li><a href="#BudgetRequest">Budget Request</a></li>
+              <li><a href="#Contact">Contact Me</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <aside class="aside" id="news" data-visible="false">
+        <div class="error403" data-visible="false">
+          <div class="errorTitle">Lorem, ipsum dolor.</div>
+          <div class="errorContent">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur iusto aliquam
+            fugiat quasi facilis repellendus porro quidem rem, sint laudantium sapiente! Accusamus explicabo debitis
+            quam beatae vitae laboriosam reiciendis saepe repudiandae quo nobis, atque omnis officia fugit repellat
+            optio ipsam! Quae sapiente deserunt fugit tempore?</div>
+          <div class="errorLink"><a href="#">Lorem,ipsum dolor.</a></div>
+        </div>
+        <div class="error403" data-visible="false">
+          <div class="errorTitle">Lorem, ipsum dolor.</div>
+          <div class="errorContent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, delectus iste ab
+            inventore totam ratione harum esse quam adipisci unde quasi reprehenderit doloremque sit blanditiis vel nam
+            expedita at veniam sapiente saepe sequi? Praesentium, maiores. Delectus, rem nulla!</div>
+          <div class="errorLink"><a href="#">Lorem,ipsum dolor.</a></div>
+        </div>
+        <div class="error403" data-visible="false">
+          <div class="errorTitle">Lorem, ipsum dolor.</div>
+          <div class="errorContent">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita molestiae vitae
+            iste temporibus et eligendi maiores error unde, nulla praesentium.</div>
+          <div class="errorLink"><a href="#">Lorem,ipsum dolor.</a></div>
+        </div>
+        <div class="error403" data-visible="false">
+          <div class="errorTitle">Lorem, ipsum dolor.</div>
+          <div class="errorContent">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita molestiae vitae
+            iste temporibus et eligendi maiores error unde, nulla praesentium.</div>
+          <div class="errorLink"><a href="#">Lorem,ipsum dolor.</a></div>
+        </div>
+        <div class="error403" data-visible="false">
+          <div class="errorTitle">Lorem, ipsum dolor.</div>
+          <div class="errorContent">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita molestiae vitae
+            iste temporibus et eligendi maiores error unde, nulla praesentium.</div>
+          <div class="errorLink"><a href="#">Lorem,ipsum dolor.</a></div>
+        </div>
+        <div class="error403" data-visible="false">
+          <div class="errorTitle">Lorem, ipsum dolor.</div>
+          <div class="errorContent">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita molestiae vitae
+            iste temporibus et eligendi maiores error unde, nulla praesentium.</div>
+          <div class="errorLink"><a href="#">Lorem,ipsum dolor.</a></div>
+        </div>
+        <div class="error403" data-visible="false">
+          <div class="errorTitle">Lorem, ipsum dolor.</div>
+          <div class="errorContent">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita molestiae vitae
+            iste temporibus et eligendi maiores error unde, nulla praesentium.</div>
+          <div class="errorLink"><a href="#">Lorem,ipsum dolor.</a></div>
+        </div>
+        <div class="error403" data-visible="false">
+          <div class="errorTitle">Lorem, ipsum dolor.</div>
+          <div class="errorContent">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita molestiae vitae
+            iste temporibus et eligendi maiores error unde, nulla praesentium.</div>
+          <div class="errorLink"><a href="#">Lorem,ipsum dolor.</a></div>
+        </div>
+        <div class="error403" data-visible="false">
+          <div class="errorTitle">Lorem, ipsum dolor.</div>
+          <div class="errorContent">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita molestiae vitae
+            iste temporibus et eligendi maiores error unde, nulla praesentium.</div>
+          <div class="errorLink"><a href="#">Lorem,ipsum dolor.</a></div>
+        </div>
+      </aside>
+    </section>
+    <section id="Portfolio">
+      <h2>Exemples of WebSites</h2>
+      <div class="gallery">
+        <div class="image">
+          <a href="https://picsum.photos/id/12/900" data-lightbox="loremPicsum" data-title="Tribute Page">
+            <img src="https://picsum.photos/id/12/900" alt="123">
+          </a>
+        </div>
+        <div class="image">
+          <a href="https://picsum.photos/id/16/900" data-lightbox="loremPicsum" data-title="Personal Portfolio">
+            <img src="https://picsum.photos/id/16/900" alt="123">
+          </a>
+        </div>
+        <div class="image"><a href="https://picsum.photos/id/33/900" data-lightbox="loremPicsum"
+            data-title="Webpage Including Form">
+            <img src="https://picsum.photos/id/33/900" alt="123">
+          </a>
+        </div>
+        <div class="image">
+          <a href="https://picsum.photos/id/22/900" data-lightbox="loremPicsum" data-title="Parallax Website">
+            <img src="https://picsum.photos/id/22/900" alt="123">
+          </a>
+        </div>
+        <div class="image">
+          <a href="https://picsum.photos/id/71/900" data-lightbox="loremPicsum" data-title="Landing Page">
+            <img src="https://picsum.photos/id/71/900" alt="123">
+          </a>
+        </div>
+        <div class="image">
+          <a href="https://picsum.photos/id/99/900" data-lightbox="loremPicsum" data-title="Restaurant Website">
+            <img src="https://picsum.photos/id/99/900" alt="123">
+          </a>
+        </div>
+        <div class="image">
+          <a href="https://picsum.photos/id/55/900" data-lightbox="loremPicsum" data-title="Event/Conference Webpage">
+            <img src="https://picsum.photos/id/55/900" alt="123">
+          </a>
+        </div>
+        <div class="image">
+          <a href="https://picsum.photos/id/42/900" data-lightbox="loremPicsum" data-title="Music Store Page">
+            <img src="https://picsum.photos/id/42/900" alt="123">
+          </a>
+        </div>
+        <div class="image">
+          <a href="https://picsum.photos/id/133/900" data-lightbox="loremPicsum" data-title="Photography Site">
+            <img src="https://picsum.photos/id/133/900" alt="123">
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="BudgetRequest">
+      <h2>Get a Budget.</h2>
+      <div class="container-budget">
+
+        <div class="personalData">
+          <p>Personal Data</p>
+          <label for="firstName">First Name:</label>
+          <input type="text" name="firstName" id="firstName">
+          <label for="lastName">Last Name:</label>
+          <input type="text" name="lastName" id="lastName">
+          <label for="cellNumber">Number:</label>
+          <input type="text" name="cellNumber" id="cellNumber" placeholder="912345678">
+        </div>
+        <div class="budget-option" id="budgetOptions">
+          <table>
+            <tr>
+              <td><label for="webSiteType">Choose a Web Site:</label>
+                <select name="webSiteType" id="webSiteType">
+                  <option selected disabled>Select a Site Type</option>
+                  <option id="firstOption">Type One</option>
+                  <option id="secondOption">Type Two</option>
+                  <option id="thirdOption">Type Three</option>
+                  <option id="fourthOption">Type Four</option>
+                  <option id="fifthOption">Type Five</option>
+                  <option id="sixthOption">Type Six</option>
+                  <option id="seventhOption">Type Seven</option>
+                  <option id="eightOption">Type Eight</option>
+                  <option id="ninthOption">Type Nine</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Initial Value:<span id="sitePrice"></span></td>
+            </tr>
+            <tr>
+              <td><label for="timeFinish">Time to finish it: </label><input type="text" name="timeFinish"
+                  id="timeFinish" readonly></td>
+            </tr>
+            <tr>
+              <td id="discountLine" class="discount"><label for="webSiteDiscount">Choose a Discount:</label>
+                <select name="webSiteDiscount" id="webSiteDiscount">
+                  <option selected disabled>Select a Discount</option>
+                  <option id="noD">1</option>
+                  <option id="dOne">2</option>
+                  <option id="dTwo">3</option>
+                  <option id="dThree">4</option>
+                  <option id="dFour">5</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="budget-extraContent" id="extraContent">
+          <input type="checkbox" id="extraOne" name="extraOne">
+          <label for="extraOne" id="extraLabelOne"></label>
+          <input type="checkbox" id="extraTwo" name="extraTwo">
+          <label id="extraLabelTwo" for="extraTwo"></label><br>
+          <input type="checkbox" id="extraThree" name="extraThree">
+          <label id="extraLabelThree" for="extraThree"></label>
+          <input type="checkbox" id="extraFour" name="extraFour">
+          <label id="extraLabelFour" for="extraFour"></label><br>
+          <input type="checkbox" id="extraFive" name="extraFive">
+          <label id="extraLabelFive" for="extraFive"></label>
+          <input type="checkbox" id="extraSix" name="extraSix">
+          <label id="extraLabelSix" for="extraSix"></label><br>
+          <input type="checkbox" id="extraSeven" name="extraSeven">
+          <label id="extraLabelSeven" for="extraSeven"></label>
+        </div>
+        <div class="budgetPrice">
+          <h3>Price for: <span id="optionChosen"></span> </h3>
+          <input type="text" name="finalPrice" id="finalPrice" readonly>
+          <button id="sendProposal" class="btn">Send me the Proposal</button>
+        </div>
+      </div>
+    </section>
+    <section id="Contact">
+      <div class="contactForm">
+        <div class="contactMe">
+          <h2>Contact Me</h2>
+          <form action="javascript:sendMail()">
+            <div class=" userIdentification">
+              <div class="fullName">
+                <label for="fullNameValue">Full Name:</label>
+                <input type="text" name="fullNameValue" id="fullNameValue" placeholder="Full Name">
+              </div>
+              <div class="email">
+                <label for="userEmailValue">Email</label>
+                <input type="email" name="userEmailValue" id="userEmailValue" placeholder="Email">
+              </div>
+            </div>
+            <div class="PhoneNumber Subject">
+              <label for="phoneNumber">Phone Number</label>
+              <input type="text" name="phoneNumber" id="phoneNumber" placeholder="912345678">
+            </div>
+            <div class="Subject">
+              <label for="subjectValue">Reason for the contact</label>
+              <input type="text" name="subjectValue" id="subjectValue">
+            </div>
+            <div class="textArea">
+              <label for="textAreaValue">Message</label>
+              <textarea name="textAreaValue" id="textAreaValue" cols="30" rows="10"></textarea>
+            </div>
+            <button id="contactFormBtn" class="btn">Send Message
+            </button>
+            <div id="contactFormBtnExtra"></div>
+
+          </form>
+        </div>
+        <div class="map">
+          <div id="googleMap"></div>
+          <div class="mapTextInfo" id="mapTextInfo" role="contentinfo" aria-expanded="false" data-visibility="false">
+            <button class="btn-Map-Toggle" id="btn-Map-Toggle" aria-expanded="false">
+            </button>
+            <h2 aria-expanded="true" id="mapDistanceTitle">Distance from your location</h2>
+            <div class="inputField" aria-expanded="false" id="mapInputField" role="contentinfo">
+              <label for="from"><i class="far fa-dot-circle"></i></label>
+              <input type="text" id="from" placeholder="Origin"><br>
+              <label for="to"><i class="fas fa-map-marker-alt"></i>.</label>
+              <input type="text" id="to" value="GWD Office" readonly placeholder="Destination">
+            </div>
+            <button aria-expanded="false" class="btn-Map" id="btnMap" onclick="calcRoute();"><i
+                class="fas fa-map-signs"></i></button>
+          </div>
+          <div id="output" data-visible="false">
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    <div class="footer">
+      <div class="row">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="https://github.com/GendPh" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="https://codepen.io/GendPh" target="_blank"><i class="fa fa-codepen"></i></a>
+      </div>
+
+      <div class="row">
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#Contact">Contact us</a></li>
+          <li><a href="#BudgetRequest">Our Services</a></li>
+          <li><a href="#Portfolio">Portfolio</a></li>
+        </ul>
+      </div>
+
+      <div class="copyRight">
+        Copyright © <span id="copyRightDate"></span> GWD || Designed By: Gabriel Ferreira
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="./script.js"></script>
+  <script src="./lightbox-plus-jquery.js"></script>
+  <script type="module" src="./budgetConfig/budgetForm.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK_qymSkZtmsuSweSvbb2qjXWQtzabLyA&map_ids=5ae336b63c3f0f62&libraries=places"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="./mapConfig/map.js"></script>
+  <script src="./contactFormValidation.js"></script>
+
+</body>
+
+</html>

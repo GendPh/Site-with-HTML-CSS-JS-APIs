@@ -1,0 +1,30 @@
+[
+  {
+    "extra": "Who we are",
+    "price": 10
+  },
+  {
+    "extra": "Where we are",
+    "price": 20
+  },
+  {
+    "extra": "Gallery",
+    "price": 30
+  },
+  {
+    "extra": "eCommerce",
+    "price": 40
+  },
+  {
+    "extra": "Maintenance",
+    "price": 90
+  },
+  {
+    "extra": "News",
+    "price": 70
+  },
+  {
+    "extra": "Socials",
+    "price": 80
+  }
+]
